@@ -1,9 +1,7 @@
+import fs from 'node:fs';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
-import { load } from 'cheerio';
-import fs from 'fs';
 import fetch from 'node-fetch';
-import path from 'path';
 
 // Store URL in a variable
 const url = 'https://memegen-link-examples-upleveled.netlify.app/';
