@@ -22,6 +22,12 @@ $('img').each(function (index, value) {
 // Get the first 10 items of the array
 const firstTenImages = imageUrlArray.slice(0, 10);
 
+// Create new folder in current directory
+const dir = './memes';
+if (!fs.existsSync(dir)) {
+  fs.mkdirSync(dir, { recursive: true });
+}
+
 // Get image data with fetch
 const imgData = [];
 
