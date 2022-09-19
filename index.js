@@ -6,7 +6,7 @@ import fetch from 'node-fetch';
 // Store URL in a variable
 const url = 'https://memegen-link-examples-upleveled.netlify.app/';
 
-// Connect to URL and print it to console
+// Connect to URL
 const { data } = await axios.get(url);
 const $ = cheerio.load(data);
 
@@ -17,7 +17,6 @@ const imageUrlArray = [];
 $('img').each(function (index, value) {
   imageUrlArray.push($(value).attr('src'));
 });
-// console.log(imageUrlArray);
 
 // Get the first 10 items of the array
 const firstTenImages = imageUrlArray.slice(0, 10);
